@@ -1,6 +1,11 @@
 let uX, uY;
 
 function setup() {
+  //スクロールを固定
+  
+    window.addEventListener("touchstart", function (event) { event.preventDefault(); }, { passive: false });
+  window.addEventListener("touchmove", function (event) { event.preventDefault(); }, { passive: false });
+
     createCanvas(windowWidth, windowWidth);
   ww = windowWidth;
   wh = ww;
